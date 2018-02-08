@@ -1,0 +1,20 @@
+@import './base/module';
+@import './layout/module';
+
+#container {
+    max-width:566px;
+    margin: 0 auto;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	overflow: hidden;
+}
+.sectionHeader {
+    width: 135px;
+    align-self: center !important; 
+    font: 20px $roboto;
+    color: $grey;
+    width: auto;
+    border-bottom: 1px solid $grey;
+	border: 1px solid red;
+}

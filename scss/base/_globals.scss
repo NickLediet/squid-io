@@ -1,0 +1,16 @@
+
+
+.hidden { display: none; }
+.big { text-transform: uppercase; }
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 135px;
+    font: 20px $roboto;
+    color: $grey;
+    width: auto;
+    margin-bottom: 35px;
+    border: none !important;
+}

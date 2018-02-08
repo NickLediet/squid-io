@@ -1,0 +1,30 @@
+
+// TYPEOGRAPHIC
+
+@mixin navigation($font: $roboto, $color: $very-dark-blue ){
+    a {
+        text-decoration: none;
+        color: $color;
+        transition: all .25s ease-in-out;
+        &:hover {
+            color: $light-blue;
+        }
+    }
+    font-weight: 700;
+    font-family: $font;
+    font-size: #{$lg}em;
+}
+
+@mixin headers($weight: 700, $font: $roboto, $size: $lg, $color: $very-dark-blue) {
+    font-weight: $weight;
+    font-family: $font;
+    font-size: #{$xl}em;
+    color: $color;
+}
+ 
+@mixin descriptions($weight: 400, $size: $sm, $font: $roboto, $color: $dark-blue) {
+    font: $weight;
+    font: $size $font;
+    color: $color;
+    line-height: $size*.75;
+}

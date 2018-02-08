@@ -1,0 +1,12 @@
+
+#mainHeader {
+    width: 100%;
+    height: 250px;
+    background:  url('../images/steve.png') no-repeat;
+	background-size: cover;
+	clip-path: polygon(0 0, 1600px 0, 1600px 40%, 0 100%); // I FINALLY FOUND A WAY!
+    #logo {
+        padding: 45px;
+        width: 125px !important; // Please forgive me
+    }
+}
