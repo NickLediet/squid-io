@@ -10,7 +10,7 @@
   align-items: center;
   flex-direction: column;
   width: 135px;
-  font: 20px "Roboto";
+  font: 40px "Roboto";
   color: #979797;
   width: auto;
   margin-bottom: 35px;
@@ -32,8 +32,7 @@
   flex-direction: column;
   font-family: "Roboto";
   text-align: center;
-  margin-top: 45px;
-  margin-bottom: 45px;
+  margin: 90px 0 100px 0;
   max-height: 3500px;
   overflow: hidden; }
   #opening-invite h1 {
@@ -52,9 +51,16 @@
     text-decoration: none;
     background: #1d2f48;
     color: #fff;
-    padding: 10px 20px;
+    padding: 20px 45px;
+    margin: 20px 0;
     border-radius: 10px;
-    width: 100px; }
+    width: 100px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4); }
+    #opening-invite a:hover {
+      background-color: #668ca7; }
+    #opening-invite a:active {
+      background-color: #315272;
+      box-shadow: 0 5px 6px rgba(0, 0, 0, 0.4); }
 
 #slogan-banner {
   display: flex;
@@ -62,10 +68,15 @@
   text-align: center;
   background: url("../images/people_working.png");
   background-size: cover;
-  height: 200px;
-  display: flex;
+  height: 500px;
   color: #F6E930;
-  margin-bottom: 45px; }
+  margin-bottom: 45px;
+  position: relative; }
+  #slogan-banner .slogan-banner__header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
   #slogan-banner h2 {
     margin-top: 50px;
     font: 20px "Roboto";
@@ -79,16 +90,16 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 30px; }
+  margin-bottom: 40px; }
   #services .service-item {
     align-self: center;
-    max-width: 350px;
+    max-width: 500px;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 30px; }
+    padding-bottom: 65px; }
   #services .service-item-icon {
     width: 130px;
-    padding-right: 15px; }
+    padding-right: 25px; }
   #services .service-item-text {
     padding-top: 25px;
     line-height: 26px; }
@@ -102,7 +113,7 @@
 
 #ux-quote {
   display: flex;
-  height: 205px;
+  height: 300px;
   width: 100%;
   background: url("../images/people-talking.png");
   background-size: cover;
@@ -135,7 +146,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 355px; }
+    max-width: 500px;
+    padding-bottom: 60px; }
     #testimonials .testimonials-item .testimonials-item-icon {
       width: 75px;
       height: 75px;
@@ -144,7 +156,7 @@
       background-size: cover;
       border: 1px solid #979797; }
     #testimonials .testimonials-item .testimonials-item-text {
-      padding: 15px;
+      padding-right: 55px;
       max-width: 250px;
       float: left; }
       #testimonials .testimonials-item .testimonials-item-text .testimonials-item-title {
@@ -194,6 +206,7 @@
   #about-us-cont .second {
     opacity: 0;
     animation: showText 500ms  ease-in-out forwards; }
+
 @keyframes showText {
   0% {
     opacity: 0; }
@@ -208,19 +221,15 @@
     #about-us-cont .show-more-btn .arrow {
       fill: #1d2f48; }
 
-#contact {
-  position: relative;
-  bottom: 300px;
-  background: #315272;
-  height: 1372px;
-  clip-path: polygon(-1500px 60%, 1500px 0, 1500px 60%, 0 100%); }
-
 #contact-us {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  bottom: 1200px; }
+  background: #315272;
+  width: 100%;
+  height: 1372px;
+  clip-path: polygon(-1500px 60%, 1500px 0, 1500px 60%, 0 100%); }
   #contact-us #contact-header {
     max-width: 450px;
     font: 34px "Roboto";
@@ -252,9 +261,12 @@
     padding: 10px 20px;
     border-radius: 10px; }
 
+.contact-us__contact-section {
+  position: relative;
+  top: 325px; }
+
 #contact-info {
   position: relative;
-  bottom: 750px;
   display: flex;
   align-items: center;
   flex-direction: column; }
@@ -278,8 +290,7 @@
   height: 500px;
   clip-path: polygon(0 76%, 1600px 0, 1600px 100%, 0 100%);
   background: #F6E930;
-  position: relative;
-  bottom: 950px; }
+  z-index: -1; }
 
 #container {
   max-width: 566px;
@@ -297,5 +308,3 @@
   width: auto;
   border-bottom: 1px solid #979797;
   border: 1px solid red; }
-
-/*# sourceMappingURL=main.css.map */

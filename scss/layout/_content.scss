@@ -5,8 +5,7 @@
     flex-direction: column;
     font-family: $roboto;
     text-align: center;
-    margin-top: 45px;
-    margin-bottom: 45px;
+    margin: 90px 0 100px 0;
 	max-height: 3500px;
 	overflow: hidden;
     h1 {    
@@ -27,10 +26,20 @@
         text-decoration: none;
         background: $very-dark-blue;
         color: #fff;
-        padding: 10px 20px;
+        padding: 20px 45px;
+        margin: 20px 0;
         border-radius: 10px;
-        width: 100px;
-           
+        width: 100px;    
+        box-shadow: 0 5px 12px rgba(#000, .4);
+
+        &:hover {
+            background-color: $blue;
+        }
+
+        &:active {
+            background-color: $dark-blue;
+            box-shadow: 0 5px 6px rgba(#000, .4); 
+        }
     }
 }
 
@@ -40,10 +49,18 @@
     text-align: center;
     background: url('../images/people_working.png');
     background-size: cover;
-    height: 200px;
-    display: flex;
+    height: 500px;
     color: $yellow;
     margin-bottom: 45px;
+    position: relative;
+
+    .slogan-banner__header {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     h2{
         margin-top: 50px;
         font: 20px $roboto;
@@ -61,17 +78,17 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     .service-item {
         align-self: center;
-        max-width: 350px;
+        max-width: 500px;
         display: flex;
         justify-content: space-between;
-        padding-bottom: 30px;
+        padding-bottom: 65px;
     }
     .service-item-icon {
         width: 130px;
-        padding-right: 15px;
+        padding-right: 25px;
     }
     .service-item-text {
         padding-top: 25px;
@@ -88,9 +105,10 @@
         }
     }
 }
+
 #ux-quote {
     display: flex;
-  	height: 205px;
+  	height: 300px;
 	width: 100%;
     background: url('../images/people-talking.png');
     background-size: cover;
@@ -122,12 +140,15 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
+    
     .testimonials-item {
         align-self: center;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 355px;
+        max-width: 500px;
+        padding-bottom: 60px;
+
         .testimonials-item-icon {
             width: 75px;
             height: 75px;
@@ -137,7 +158,7 @@
             border: 1px solid $grey;
         }
         .testimonials-item-text{
-            padding: 15px;
+            padding-right: 55px;
             max-width: 250px;
             float: left;
             .testimonials-item-title {
@@ -156,6 +177,7 @@
 
     }
 }
+
 #about-us-cont {
 	width: 80%;
 	font-family: $roboto;
@@ -163,7 +185,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
+    
 	.about-us-item {
 		display: flex;
 		align-items: center;
@@ -218,19 +241,16 @@
 	}
 }
 
-#contact {
-	position: relative;
-	bottom: 300px;
-	background: $dark-blue;
-	height: 1372px;
-	clip-path: polygon(-1500px 60%, 1500px 0, 1500px 60%, 0 100%);
-}
 #contact-us {
-	position: relative;
+    position: relative;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	bottom: 1200px;
+    align-items: center;
+    background: $dark-blue;
+    width: 100%;
+    height: 1372px;
+    clip-path: polygon(-1500px 60%, 1500px 0, 1500px 60%, 0 100%);
+
 	#contact-header {
 		max-width: 450px;
 		font: 34px $roboto;
@@ -240,7 +260,8 @@
 		span {
 			font-size: 52px;
 		}
-	}
+    }
+    
 	form {display: flex; flex-direction: column; align-items: center}
 	input, textarea {
 		border:  4px solid $blue;
@@ -263,12 +284,18 @@
 		border-radius: 10px;
 	}
 }
+
+.contact-us__contact-section {
+    position: relative;
+    top: 325px;
+}
+
 #contact-info {
 	position: relative;
-	bottom: 750px;
 	display: flex;
 	align-items: center;
-	flex-direction: column;
+    flex-direction: column;
+    
 	h2 {
 		font: 60px $roboto;
 		color: $very-dark-blue;
@@ -293,8 +320,9 @@
 	height: 500px;
 	clip-path: polygon(0 76%, 1600px 0, 1600px 100%, 0 100%);
 	background: $yellow;
-	position: relative;
-	bottom: 950px;
+	// position: relative;
+    // bottom: 950px;
+    z-index:-1;
 }
 
 
